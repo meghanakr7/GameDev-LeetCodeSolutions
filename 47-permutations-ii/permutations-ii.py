@@ -1,18 +1,18 @@
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         res = []
-        res1 = []
+        indexes = []
         def dfs(cur):
             if len(nums) == len(cur) and cur not in res:
                 res.append(cur[:])
             for i in range(len(nums)):
-                if i not in res1:
-                    res1.append(i)
+                if i not in indexes:
+                    indexes.append(i)
                     cur.append(nums[i])
                     dfs( cur)  
                     cur.pop() 
-                    res1.pop()
+                    indexes.pop()
         for i in range(len(nums)): 
-            res1 = [i]
+            indexes = [i]
             dfs([nums[i]])
         return res
