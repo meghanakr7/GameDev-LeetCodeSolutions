@@ -9,7 +9,6 @@ class Solution:
             l = len(queue)
             while l>0:
                 l -= 1
-                print("Queue is ",queue)
                 pos, isForward = queue.popleft()
                 if pos == x :
                     return hops
