@@ -11,22 +11,18 @@ class Solution:
         def bfs(node):
             while q:
                 node = q.pop()
-                # print("popped node is ",node)
                 if node.val not in d:
                     d[node.val] = 1
                 else:
                     d[node.val] += 1
-                # print("node is ",node, node.left)
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
         bfs(root)
-        print("d is ",d)
-        d1 = sorted(d.items() ,key = lambda x:x[1], reverse = True)
-        largest_value_keys = [item[0] for item in d1 if item[1] == d1[0][1]]
+        sorted_items = sorted(d.items(),key = lambda x:x[1], reverse = True)
+        largest_value_keys = [item[0] for item in sorted_items if item[1] == sorted_items[0][1]]
         d = sorted(d.values(), reverse = True)
-        print("sorted d is ",d, list(d),largest_value_keys)
         return largest_value_keys
                 
             
