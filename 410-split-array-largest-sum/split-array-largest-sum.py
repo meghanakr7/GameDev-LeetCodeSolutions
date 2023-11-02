@@ -9,15 +9,12 @@ class Solution:
                     total = num
                     count += 1
                 if count >= k:
-                    print("coutn is ",count)
                     return False
-            print("Returing true with count ",count)
             return True
         left = max(nums)
         right = sum(nums)
         while left < right:
             mid = left + (right - left)//2
-            print("left, mid, right ",left,mid,right)
             if feasible(mid):
                 right = mid
             else:
