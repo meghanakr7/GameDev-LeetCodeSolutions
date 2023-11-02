@@ -11,13 +11,11 @@ class Solution:
         res = []
         res1 = []
         allNodes = []
-
         def dfs(root):
             left = 0
             right = 0
             if root is None:
                 return 0
-            
             d[root.val] = root.val
             if root.left is None and root.right is None:
                 d[root.val] = root.val
@@ -38,7 +36,6 @@ class Solution:
             v = 1
             if root is None:
                 return 0
-                
             if root.left:
                 left = dfscount(root.left)
                 v = 1 + left
@@ -49,12 +46,8 @@ class Solution:
             countNodes.append(v)
             return v
         dfs(root)
-        print("d is ",d)
-        print("res is ",res)
         dfscount(root)
-        print("CountNodes are ",countNodes)
         count = 0
-        print("keys are ",keys)
         
         for i, val in enumerate(res):
             if res[i] // countNodes[i] == keys[i]:
