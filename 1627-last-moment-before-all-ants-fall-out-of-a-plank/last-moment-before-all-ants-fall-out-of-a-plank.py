@@ -5,7 +5,6 @@ class Solution:
             maxi = max(left[i], maxi)
         for j in range(len(right)):
             maxi = max(n -right[j], maxi)
-        print("maxi is ",maxi)
         return maxi
 
             
