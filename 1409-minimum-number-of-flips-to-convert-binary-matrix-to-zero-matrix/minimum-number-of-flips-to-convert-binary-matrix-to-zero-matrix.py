@@ -20,7 +20,7 @@ class Solution:
         while queue:
             isFinal = True
             curState, numSteps = queue.popleft()
-            print("CurState is ",curState)
+            # print("CurState is ",curState)
             for row in range(len(curState)):
                 for col in range(len(curState[0])):
                     if curState[row][col] == 1:
