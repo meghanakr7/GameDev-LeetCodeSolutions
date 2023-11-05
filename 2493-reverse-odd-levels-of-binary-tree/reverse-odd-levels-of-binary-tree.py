@@ -6,26 +6,32 @@
 #         self.right = right
 class Solution:
     def reverseOddLevels(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        res = []
+        nextNodes = []
         def bfs(root):
             q = deque([root])
-            nextNodeVals = []
             depth = 0
-            nextNodes = []
             while q:
+                nextNodes = deque([])
                 for x in range(len(q)):
-                    node = q.pop()
+                    node = q.popleft()
                     if node:
                         if node.left:
                             nextNodes.append(node.left)
                         if node.right:
                             nextNodes.append(node.right)
+                    # print("before nextNodes ", nextNodes)   
                 depth += 1
-                if depth % 2:
+                # print("\ndepth is ",depth)
+                if depth%2:
+                    # print("\nentered\n")
                     for i in range(len(nextNodes)//2):
-                        nextNodes[i].val, nextNodes[len(nextNodes)-1-i].val = nextNodes[len(nextNodes) -i - 1].val, nextNodes[i].val
+                        nextNodes[i].val, nextNodes[len(nextNodes)-i-1].val = nextNodes[len(nextNodes)-i-1].val, nextNodes[i].val
+                # print("after nextNodes are ",nextNodes)
                 q, nextNodes = nextNodes, q
+            # print("root is ",root)
             return root
         return bfs(root)
+                    
 
 
+        
