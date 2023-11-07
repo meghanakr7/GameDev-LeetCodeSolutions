@@ -13,8 +13,6 @@ class Solution:
                 if rooms[room][i] not in visited:
                     canVisit.append(rooms[room][i])
                     visited.add(rooms[room][i])
-            print("CanVisit is ",canVisit)
-        print("visited is ",visited)
         if len(visited) == len(rooms):
             return True
         return False
