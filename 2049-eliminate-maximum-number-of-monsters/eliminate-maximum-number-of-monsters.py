@@ -1,9 +1,6 @@
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
         monsters = 0
-        charged = 1
-        dead = 0
-        t = 0
         n = len(dist)
         time = [0] * n
         monsters = 0
