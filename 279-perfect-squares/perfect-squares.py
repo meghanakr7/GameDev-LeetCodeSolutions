@@ -10,7 +10,6 @@ class Solution:
                     break
                 else:
                     dp[target] = min(dp[target], 1 + dp[target - sq])
-            print("Dp[target] is ",target, dp[target])
         return dp[n]
 
 
