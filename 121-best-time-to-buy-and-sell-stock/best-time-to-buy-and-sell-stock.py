@@ -6,5 +6,4 @@ class Solution:
         for price in prices:
             profit = max(price - min_price, profit)
             min_price = min(price, min_price)
-        print("profit is ",profit)
         return profit
