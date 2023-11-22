@@ -1,10 +1,9 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        localMax = [0] * len(nums)
-        localMax[0] = nums[0]
-        maxi = nums[0]
+        dynamicTable = [0] * len(nums)
+        dynamicTable[0] = nums[0]
         for i in range(1, len(nums)):
-            localMax[i] = max(nums[i], localMax[i-1] + nums[i])
-        return max(localMax)
-
-        
+            dynamicTable[i] = max(nums[i], dynamicTable[i-1] + nums[i])
+        # print("dynamic Table is ",dynamicTable)
+        # print("max is ",max(dynamicTable))
+        return max(dynamicTable)
