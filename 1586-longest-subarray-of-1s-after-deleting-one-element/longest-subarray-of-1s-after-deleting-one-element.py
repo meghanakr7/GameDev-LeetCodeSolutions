@@ -15,13 +15,11 @@ class Solution:
                 maxi = max(maxi, countOnes)
                 if countZeroes == 1:
                     prevOnes = j - zeroIndex - 1
-                    print("prevOnes are ",prevOnes)
                     countOnes = prevOnes
                 zeroIndex = j
                 countZeroes = 1
             j += 1
         maxi = max(maxi, countOnes)
-        print("ones are ", maxi)
         if not enter:
             return maxi - 1
         return maxi
