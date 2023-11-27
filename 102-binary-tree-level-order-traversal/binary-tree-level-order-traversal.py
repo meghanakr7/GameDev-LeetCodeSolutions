@@ -22,8 +22,8 @@ class Solution:
                             res.append(node.left.val)
                             nextNodes.append(node.left)
                         if node.right:
-                            nextNodes.append(node.right)
                             res.append(node.right.val)
+                            nextNodes.append(node.right)
                 q = nextNodes
                 if len(res):
                     finalRes.append(res)
