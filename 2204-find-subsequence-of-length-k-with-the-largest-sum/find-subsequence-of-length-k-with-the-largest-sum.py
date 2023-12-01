@@ -11,6 +11,7 @@ class Solution:
             allNums.append(-1 * heapq.heappop(modifiedNums))
             k -= 1
         finalList = []
+        # return allNums
         for i in range(len(nums)):
             if nums[i] in allNums:
                 finalList.append(nums[i])
