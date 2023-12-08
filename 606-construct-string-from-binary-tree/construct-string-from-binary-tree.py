@@ -19,9 +19,6 @@ class Solution:
                     res.append('(')
                     dfs(root.right)
                     res.append(')')
-        print('root' ,res)
         dfs(root)
-        print('res is ',res)
-        print('res str is ',"".join(res))
         return "".join(res)
         
