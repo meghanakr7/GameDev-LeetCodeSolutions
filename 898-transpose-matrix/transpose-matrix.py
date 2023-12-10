@@ -5,5 +5,4 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 res[j][i] = matrix[i][j]
-        print('matrix is ', res)
         return res
