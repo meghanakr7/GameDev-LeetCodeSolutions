@@ -18,7 +18,6 @@ class Solution:
                 if mat[i][j] == 1:
                     if (checkRow(i, j) and checkCol(i, j)):
                         finalRes += 1
-        print('finalRes ',finalRes)
         return finalRes
 
 
