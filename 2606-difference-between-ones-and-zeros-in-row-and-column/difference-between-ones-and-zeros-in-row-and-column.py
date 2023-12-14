@@ -6,7 +6,6 @@ class Solution:
             onesRow = []
             zerosRow = []
             for i in range(m):
-                print('va is ',grid[i].count(1))
                 onesRow.append(grid[i].count(1))
                 zerosRow.append(grid[i].count(0))
             countOnes = 0
@@ -23,20 +22,9 @@ class Solution:
                         countZeros += 1
                 onesCol.append(countOnes)
                 zerosCol.append(countZeros)
-            print('onesRow is ',onesRow,zerosRow)
-            print('cols are ',onesCol, zerosCol)
-
             res = [[0]*n for i in range(m)]
             for i in range(m):
                 for j in range(n):
                     res[i][j] = onesRow[i] + onesCol[j] - zerosRow[i] - zerosCol[j]
-            print('res is ',res)
             return res
         return countOnes()
-        
-            
-        # for i in range(m):
-        #     for j in range(n):
-        #         res[i][j] = ans(i,j)
-
-        
