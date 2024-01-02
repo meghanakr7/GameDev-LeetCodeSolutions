@@ -3,6 +3,7 @@ class Solution:
         res = []
         prevRes = 0
         for i in range(len(nums)):
-            res.append(prevRes + nums[i])
             prevRes += nums[i]
+            res.append(prevRes)
+            
         return res
