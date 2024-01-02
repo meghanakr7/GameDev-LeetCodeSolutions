@@ -12,8 +12,6 @@ class Solution:
             rightArr.append(rightSum)
             rightSum += nums[i]
         rightArr = rightArr[::-1]
-        print(leftArr, rightArr)
         for i in range(len(leftArr)):
             res.append(abs(leftArr[i] - rightArr[i]))
-        print('res is ',res)
         return res
