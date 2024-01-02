@@ -5,5 +5,4 @@ class Solution:
         for i in range(len(nums)):
             res.append(prevRes + nums[i])
             prevRes += nums[i]
-        print('res is ',res)
         return res
