@@ -7,7 +7,6 @@ class Solution:
                 if ((i + length - 1) < len(arr)):
                     totalSum += sum(arr[i:i+length])
             length += 2
-        print('totalSum ',totalSum)
         return totalSum
 
 
