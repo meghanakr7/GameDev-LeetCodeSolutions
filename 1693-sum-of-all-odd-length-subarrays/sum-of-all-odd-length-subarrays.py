@@ -3,11 +3,9 @@ class Solution:
         length = 1
         totalSum = 0
         while length <= len(arr):
-            print('length is ',length)
             for i in range(len(arr)):
                 if ((i + length - 1) < len(arr)):
                     totalSum += sum(arr[i:i+length])
-            print('totalSum ',totalSum)
             length += 2
         print('totalSum ',totalSum)
         return totalSum
