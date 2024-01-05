@@ -17,8 +17,4 @@ class Solution:
                     break
             if(enter == 0):
                 res.append(n)
-                
-
-            
-        print('res is ',res)
         return res
