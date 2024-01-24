@@ -12,7 +12,6 @@ class Solution:
             output.append(first)
             nums = nums[2:]
             i += 2
-        print('output is ',output)
         return output
 
         
