@@ -19,7 +19,7 @@ class Solution:
                     allRes.append(int(res / nums[i]))
             else:
                 allRes.append(res)
-        print('allRees ',allRes)
+        # print('allRees ',allRes)
         return allRes
 
 
