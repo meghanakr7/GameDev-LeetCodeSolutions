@@ -2,9 +2,7 @@ class Solution:
     def makeSmallestPalindrome(self, s: str) -> str:
         l = 0
         r = len(s) - 1
-        chars = []
-        for i in range(len(s)):
-            chars.append(s[i])
+        chars = list(s)
         count = 0
         while l < r:
             if(s[l] < s[r]):
