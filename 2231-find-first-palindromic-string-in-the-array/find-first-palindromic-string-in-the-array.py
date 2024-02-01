@@ -4,7 +4,6 @@ class Solution:
             l = 0
             r = len(words[i]) - 1
             while l < r:
-                print('l and r ',l,r)
                 if words[i][l] == words[i][r]:
                     l += 1
                     r -= 1
