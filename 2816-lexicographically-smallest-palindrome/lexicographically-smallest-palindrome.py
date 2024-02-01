@@ -5,7 +5,6 @@ class Solution:
         chars = []
         for i in range(len(s)):
             chars.append(s[i])
-        print('allchars are ',chars)
         count = 0
         while l < r:
             if(s[l] < s[r]):
@@ -16,8 +15,6 @@ class Solution:
                 count += 1
             l += 1
             r -= 1
-        print('chars are ',chars)
-        print('count is ',count, ''.join(chars))
         return ''.join(chars)
 
 
