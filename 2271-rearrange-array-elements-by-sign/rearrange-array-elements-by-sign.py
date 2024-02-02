@@ -11,9 +11,7 @@ class Solution:
         nindex = 0
         i = 0
         res = []
-        # print('pnum is ',pnum, nnum)
         while i < len(nums):
-            # print('pindex is ',pindex)
             if pindex < len(pnum):
                 res.append(pnum[pindex])
             if nindex < len(nnum):
