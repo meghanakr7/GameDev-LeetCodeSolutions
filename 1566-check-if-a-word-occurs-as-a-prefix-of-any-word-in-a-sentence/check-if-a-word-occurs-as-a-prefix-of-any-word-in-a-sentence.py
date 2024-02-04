@@ -1,7 +1,7 @@
 class Solution:
     def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
         allWords = sentence.split(' ')
-        print('allWords are ',allWords)
+        # print('allWords are ',allWords)
         res = -1
         for i in range(len(allWords)):
             # print('words is ',allWords[i], allWords[i][0:len(searchWord)])
