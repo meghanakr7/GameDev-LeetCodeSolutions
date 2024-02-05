@@ -13,9 +13,9 @@ class Solution:
                 if m[ord(s[i])-ord('a')] > 1:
                     ones.remove(s[i])
                     s = s.replace(s[i],"_")
-                    print('s[i] and s',s[i],s)
+                    # print('s[i] and s',s[i],s)
             i += 1
-        print('ones are ',ones)
+        # print('ones are ',ones)
         if(len(ones) == 0):
             return -1
         return act.index(ones[0])
