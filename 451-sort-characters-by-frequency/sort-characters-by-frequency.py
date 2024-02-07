@@ -1,19 +1,21 @@
 class Solution:
     def frequencySort(self, s: str) -> str:
         d = {}
-        for char in s:
-            if char in d:
-                d[char] += 1
+        for i in range(len(s)):
+            if s[i] in d:
+                d[s[i]] += 1
             else:
-                d[char] = 1
+                d[s[i]] = 1
+        d = dict(sorted(d.items(), key = lambda item: item[1], reverse = True))
+        res = ''
+        items = list(d.keys())
+        for i in range(len(d.items())):
+            val = d[items[i]]
+            while(val):
+                res += items[i]
+                val -= 1
+        return res
+
+
         
-        d = sorted(d.items(), key = lambda x: x[1],reverse = True)
-        # print("d is ",d)
-        newString = ""
-        for key, val in d:
-            while val:
-                newString += key
-                val -=1
-        print("newString is ",newString)
-        return newString
         
