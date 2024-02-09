@@ -12,16 +12,12 @@ class Solution:
                     if dp[i] > max_size:
                         max_size = dp[i]
                         max_index = i
-        print('max_size and max_index ',max_size, max_index)
-        
         result = []
         num = nums[max_index]
-        print('num is ',num,dp)
         for i in range(max_index, -1, -1):
             if num % nums[i] == 0 and dp[i] == max_size:
                 num = nums[i]
                 max_size -= 1
                 result.append(nums[i])
-        print('res is ',result)
         return result
 
