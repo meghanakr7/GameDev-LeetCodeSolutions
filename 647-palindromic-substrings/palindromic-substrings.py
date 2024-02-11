@@ -8,10 +8,7 @@ class Solution:
 
         for i in range(len(s)):
             createSubStrings(i)
-        # print('res is ',res)
         for i in range(len(res)):
             if(res[i] == res[i][::-1]):
                 count += 1
-        
-        print('Count is ',count)
         return count
