@@ -34,7 +34,6 @@ class Solution:
                 else:
                     patternSmall += queries[i][j]
             patternWords.append(patternSmall)
-            print('patternWords are ',patternWords)
             if(len(patternUpperCases)!=len(trueUpperCases) or patternUpperCases != trueUpperCases):
                 ans.append(False)
             else:
@@ -43,31 +42,22 @@ class Solution:
                 else:
                     word = queries[i]
                     k = 0
-                    print('Word is ',word)
                     while k < len(actWords):
                         if actWords[k]:
                             word1 = actWords[k]
                             word2 = patternWords[k]
                             ind = 0
                             l = 0
-                            print('patternWord and actWords ',patternWords[k],actWords[k])
                             while l < len(patternWords[k]):
                                 if ind < len(word1) and word1[ind] == patternWords[k][l]:
                                     ind += 1
                                 l += 1
                             if ind != len(word1):
-                                # ans.append(False)
                                 break
-                            # else:
-                            #     ans.append(False)
-                            # break
-                    
                         k += 1
                     if k == len(actWords):
                         ans.append(True)
                     else:
                         ans.append(False)
-
-        print('ans is ',ans)
         return ans
 
