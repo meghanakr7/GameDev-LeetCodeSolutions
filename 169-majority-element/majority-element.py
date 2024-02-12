@@ -6,7 +6,6 @@ class Solution:
         count = 1
         prev = nums[0]
         maxi = -math.inf
-        print("nums are ",nums)
         while i < len(nums):
             if prev == nums[i]:
                 count += 1
