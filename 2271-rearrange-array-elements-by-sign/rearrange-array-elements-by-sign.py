@@ -17,5 +17,4 @@ class Solution:
             i += 2
             j += 1
             k += 1
-        print('res is ',res)
         return res
