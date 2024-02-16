@@ -4,7 +4,6 @@ class Solution:
         i = 0
         
         while len(s) > len(newString) and i < len(words):
-            # print('nw Str ',newString)
             newString += words[i]
             if(newString == s[0:len(newString)]):
                 if(newString == s):
@@ -14,7 +13,6 @@ class Solution:
             else:
                 return False
             i += 1
-        # print('new String ', newString)
         return False
 
         
