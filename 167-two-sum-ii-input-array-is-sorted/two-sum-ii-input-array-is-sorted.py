@@ -1,10 +1,15 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        res = []
-        for i in range(len(numbers)):
-            if((target - numbers[i]) in numbers[i+1:]):
-                res.append(i + 1)
-                res.append(numbers[i+1:].index(target - numbers[i]) + 2 + i)
-                return res
+        i = 0
+        j = len(numbers)-1
+        numbers.sort()
+        while i < j:
+            if(numbers[i] + numbers[j] == target):
+                return [i+1, j+1]
+            elif(numbers[i] + numbers[j] > target):
+                j -= 1
+            else:
+                i += 1
+        print('i and j are ',i,j)
 
         
