@@ -16,14 +16,9 @@ class Solution:
                     total -= grid[i][j]
                 else:
                     s.remove(grid[i][j])
-        print('length is ',length, (length+1), (length+1)//2, length*(length+1)//2)
         actualSum = length*(length+1)//2
-        print('total is ',total, actualSum)
-        print('diff is ', abs(actualSum - total))
-        print('repeated si ',repeated)
         res.append(repeated)
         res.append(abs(actualSum - total))
-        print('res is ',res)
         return res
 
 
